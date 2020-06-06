@@ -1,0 +1,18 @@
+{
+  "name": "kristhomsen-dk",
+  "version": "1.0.0",
+  "description": "Source for KrisThomsen.dk",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx eleventy",
+    "watch": "npx eleventy --watch",
+    "serve": "npx eleventy --serve",
+    "debug": "DEBUG=* npx eleventy"
+  },
+  "author": "Kris Thomsen",
+  "license": "ISC",
+  "homepage": "https://kristho.github.io",
+  "dependencies": {
+    "@11ty/eleventy": "^0.11.0"
+  }
+}

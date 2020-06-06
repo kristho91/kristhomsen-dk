@@ -1,1 +1,1 @@
-# kristhomsen-dk
+# Website for KrisThomsen.dk
