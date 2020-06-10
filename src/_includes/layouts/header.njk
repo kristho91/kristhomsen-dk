@@ -1,0 +1,16 @@
+<header>
+  <nav>
+    <a href="/">
+      KrisThomsen.
+    </a>
+    <ul>
+      {% for item in navigation.header %}
+        <li>
+          <a href="{{ item.link }}">
+            {{ item.text -}}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

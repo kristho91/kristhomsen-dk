@@ -11,9 +11,8 @@
   },
   "author": "Kris Thomsen",
   "license": "ISC",
-  "homepage": "https://kristho.github.io",
+  "homepage": "https://kristhomsen.dk",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "@11ty/eleventy-navigation": "^0.1.5"
+    "@11ty/eleventy": "^0.11.0"
   }
 }
