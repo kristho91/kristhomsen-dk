@@ -1,5 +1,7 @@
 module.exports = {
-    header: [
-        { text: '404', link: '/404.html' }
-    ]
+  header: [
+    { text: 'Home', link: '/' },  
+    { text: 'About Me', link: '/about-me' },
+    { text: 'CV', link: '/cv' }
+  ]
 }
