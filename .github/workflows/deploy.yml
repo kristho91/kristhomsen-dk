@@ -6,15 +6,15 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
       - name: Setup Node 
-        uses: actions/setup-node@v2-beta
+        uses: actions/setup-node@v3
         with:
-          node-version: '14'
+          node-version: 16
 
       - name: Cache dependencies
         uses: actions/cache@v2
