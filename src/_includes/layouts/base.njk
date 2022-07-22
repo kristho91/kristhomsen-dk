@@ -1,7 +1,17 @@
+---js
+{
+  navigationOptions: {
+    listClass: "site-nav",                  // Add a class to the top level
+    listItemClass: "nav-item",              // Add a class to every item
+    activeListItemClass: "nav-item-active", // Add a class to the current page's item
+    activeKey: eleventyNavigation.key
+  }
+}
+---
 <!DOCTYPE html>
 <html lang="{{ metadata.language }}">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>{{ eleventyNavigation.key }} - {{ metadata.title }}</title>
@@ -11,19 +21,18 @@
     
     <link rel="stylesheet" href="/assets/normalize.css">
     <link rel="stylesheet" href="/assets/sakura-vader.css">
+    <link rel="stylesheet" href="/assets/custom.css">
   </head>
   <body>
 
-    <header>
-      <nav>
-        <a href="{{ '/' | url }}">
-          {{ metadata.title }}
-        </a>
-        {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
-      </nav>
+    <header class="site-header">
+      <h1 class="site-title">
+        <a href="{{ '/' | url }}">{{ metadata.title }}</a>
+      </h1>
+      {{ collections.all | eleventyNavigation | eleventyNavigationToHtml(navigationOptions) | safe }}
     </header>
 
-    <main>
+    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
       {{ content | safe }}
     </main>
     
