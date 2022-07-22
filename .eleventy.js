@@ -1,4 +1,8 @@
+const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+
 module.exports = function(config) {
+  config.addPlugin(eleventyNavigationPlugin);
+
   config.addLayoutAlias('page', 'layouts/page.njk');
   config.addPassthroughCopy('src/assets');
 
@@ -20,6 +24,7 @@ module.exports = function(config) {
       'md',
       'njk'
     ],
-    passthroughFileCopy: true
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk"
   };
 };

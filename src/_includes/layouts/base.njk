@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="{{ metadata.language }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{ eleventyNavigation.key }} - {{ metadata.title }}</title>
+
+    <meta name="description" content="{{ description or metadata.description }}">
+    <meta name="generator" content="{{ eleventy.generator }}">
+    
+    <link rel="stylesheet" href="/assets/normalize.css">
+    <link rel="stylesheet" href="/assets/sakura-vader.css">
+  </head>
+  <body>
+
+    <header>
+      <nav>
+        <a href="{{ '/' | url }}">
+          {{ metadata.title }}
+        </a>
+        {{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
+      </nav>
+    </header>
+
+    <main>
+      {{ content | safe }}
+    </main>
+    
+    <footer></footer>
+
+  </body>
+</html>

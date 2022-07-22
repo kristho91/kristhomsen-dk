@@ -1,3 +1,11 @@
 {
-    "title": "KrisThomsen."
+  "title": "KrisThomsen.",
+  "url": "https://kristhomsen.dk",
+  "language": "en",
+  "description": "",
+  "author": {
+    "name": "Kris Thomsen",
+    "email": "mail@kristhomsen.dk",
+    "url": "https://kristhomsen.dk/about-me/"
+  }
 }
