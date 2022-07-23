@@ -1,5 +1,7 @@
 .site-header {
   display: flex;
+  align-items: center;
+  justify-content: space-between;;
 }
 
 .site-title {
@@ -11,13 +13,12 @@
 
 .site-nav {
   margin: 0;
-  margin-left: 2em;
   padding: 0;
   list-style: none;
+  display: flex;
+  gap: 1.9rem;
 }
 
 .site-nav > .nav-item {
-  display: inline-block;
-  margin-right: 1em;
   margin-bottom: 0;
 }

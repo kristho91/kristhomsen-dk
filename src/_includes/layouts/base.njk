@@ -12,18 +12,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>{{ eleventyNavigation.key }} - {{ metadata.title }}</title>
-
     <meta name="description" content="{{ description or metadata.description }}">
     <meta name="generator" content="{{ eleventy.generator }}">
     
+    <title>{{ eleventyNavigation.key }} - {{ metadata.title }}</title>
+
     <link rel="stylesheet" href="/assets/normalize.css">
     <link rel="stylesheet" href="/assets/sakura-vader.css">
     <link rel="stylesheet" href="/assets/custom.css">
   </head>
-  <body>
-
+  <body class="template--{% if templateClass %}{{ templateClass }}{% else %}fallback{% endif %}">
+  
     <header class="site-header">
       <h1 class="site-title">
         <a href="{{ '/' | url }}">{{ metadata.title }}</a>
@@ -31,7 +30,7 @@
       {{ collections.all | eleventyNavigation | eleventyNavigationToHtml(navigationOptions) | safe }}
     </header>
 
-    <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
+    <main>
       {{ content | safe }}
     </main>
     

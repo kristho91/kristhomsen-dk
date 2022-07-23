@@ -25,6 +25,7 @@ module.exports = function(config) {
       'njk'
     ],
     markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk"
+    htmlTemplateEngine: "njk",
+    dataTemplateEngine: "njk"
   };
 };
