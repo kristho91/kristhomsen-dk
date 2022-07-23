@@ -34,7 +34,16 @@
       {{ content | safe }}
     </main>
     
-    <footer></footer>
+    <footer class="site-footer">
+      <div class="footer-item">
+        <strong>&copy; 2022</strong><br>
+        <a href="{{ '/' | url }}">{{ metadata.author.name }}</a>
+      </div>
+      <div class="footer-item">
+        <strong>Social</strong><br>
+        <a href="{{ metadata.author.github }}" target="_blank" rel="noopener noreferrer">Github</a>
+      </div>
+    </footer>
 
   </body>
 </html>
