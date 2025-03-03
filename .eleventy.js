@@ -1,6 +1,6 @@
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
+import eleventyNavigationPlugin from '@11ty/eleventy-navigation';
 
-module.exports = function(config) {
+export default async function (config) {
   config.addPlugin(eleventyNavigationPlugin);
 
   config.addLayoutAlias('page', 'layouts/page.njk');
@@ -11,19 +11,16 @@ module.exports = function(config) {
     './node_modules/sakura.css/css/sakura-vader.css': './assets/sakura-vader.css'
   });
 
-  return {
-    dir: {
-      data: '_data',
-      includes: '_includes',
-      input: 'src',
-      output: 'dist'
-    },
-    templateFormats: [
-      'md',
-      'njk'
-    ],
-    markdownTemplateEngine: "njk",
-    htmlTemplateEngine: "njk",
-    dataTemplateEngine: "njk"
-  };
+  // config.setDataDirectory('_data');
+  // config.setIncludesDirectory('_includes');
+  config.setInputDirectory('src');
+  config.setOutputDirectory('dist');
+
+  config.setTemplateFormats(['md', 'njk']);
+};
+
+export const config = {
+  markdownTemplateEngine: 'njk',
+  htmlTemplateEngine: 'njk',
+  dataTemplateEngine: 'njk'
 };
